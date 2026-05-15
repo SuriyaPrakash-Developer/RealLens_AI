@@ -1,0 +1,7 @@
+{
+  "name": "ArtAuthentic: AI vs Human Art Classifier",
+  "description": "A deep learning-based application to differentiate between AI-generated art and human-created art using CNN architectures.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
