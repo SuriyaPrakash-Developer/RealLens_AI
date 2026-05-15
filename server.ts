@@ -3,12 +3,14 @@ import { createServer as createViteServer } from 'vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import multer from 'multer';
-import Database from 'better-sqlite3';
+import Database from 'better-sqlite3'; 
 import { GoogleGenAI } from '@google/genai';
 import dotenv from 'dotenv';
 import { randomBytes, scryptSync, timingSafeEqual } from 'crypto';
 
-dotenv.config({ path: '.env.local' });
+for (const envPath of ['.env.local', '.env']) {
+  dotenv.config({ path: envPath });
+}
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const db = new Database('predictions.db');
