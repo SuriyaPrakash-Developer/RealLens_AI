@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import ChatBot from './components/ChatBot';
 import HomePage from './pages/HomePage';
@@ -55,6 +56,7 @@ export default function App() {
           </p>
         </div>
       </footer>
+      <Analytics />
     </div>
   );
 }
